@@ -28,37 +28,37 @@ app.post('/items', (req, res)=>{
 const Notepad = {
     name: 'Notepad',
     image: 'Notepad.avif',
-    type: Notepad,
+    type: "Notepad",
     price: 25
 }
 const Lamp = {
     name: 'Lamp',
     image: 'Lamp.jpg',
-    type: Lamp,
+    type: "Lamp",
     price: 50
 }
 const Toy = {
     name: 'Hulk',
     image: 'Hulk.jpg',
-    type: Toy,
+    type: "Toy",
     price: 75
 }
 const shirt = {
     name: 'T-shirt',
     image: 'T-shirt.webp',
-    type: shirt,
+    type: "shirt",
     price: 250
 }
 const Mittens = {
     name: 'Mittens',
     image: 'Mittens.webp',
-    type: Mittens,
+    type: "Mittens",
     price: 90
 }
 const Watch = {
     name: 'Watch',
     image: 'Watch.avif',
-    type: Watch,
+    type: "Watch",
     price: 2500
 }
 
