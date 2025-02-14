@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Cart.css'
 
-function Cart(props) {
+function Cart(props); {
   const { cart, onRemove } = props;
   
     return (
