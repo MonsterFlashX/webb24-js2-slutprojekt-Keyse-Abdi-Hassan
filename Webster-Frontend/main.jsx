@@ -1,5 +1,13 @@
-import {createRoot} from 'react-dom/client'
-import { App } from './src/components/App.jsx';
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import { StrictMode } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App.jsx';
 
-const root = createRoot(document.querySelector('#root'));
-root.render(<App/>);
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <BrowserRouter>
+    <App/>
+    </BrowserRouter>
+  </StrictMode>,
+)
