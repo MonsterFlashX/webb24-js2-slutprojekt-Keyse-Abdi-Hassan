@@ -1,8 +1,34 @@
 import React, { useState } from 'react';
 import './Cart.css'
 
-function Cart(props) {
-  const { cart, onRemove } = props;
+function Cart({ cart, setCart, onRemove }) {
+  const [message, setMessage] = useState('');
+
+  const handleCheckout = async () => {
+    if (cart.length === 0) {
+      setMessage('Your cart is empty!');
+      return;
+    }
+
+    try {
+      const response = await fetch("http://localhost:7000/api/orders/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ cart }),
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        setMessage("Thank you for your purchase!");
+      } else {
+        setMessage(data.error);
+      }
+    } catch (error) {
+      console.error("Checkout failed:", error);
+      setMessage("Failed to process order. Please try again.");
+    }
+  };
+
   
     return (
         <>
@@ -33,9 +59,8 @@ function Cart(props) {
             ))}
           </tbody>       
         </table>
-        <button onClick={() => {
-                  onAdd(cartItem)
-                }}>Pay</button>
+        <button onClick={handleCheckout}>Checkout</button>
+        {message && <p>{message}</p>}
         </>
       );
     }

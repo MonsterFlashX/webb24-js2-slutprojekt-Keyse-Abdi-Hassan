@@ -1,47 +1,46 @@
 import React, { useState } from 'react';
 import './Products.css'
 
-
 const products = [
-    {
-        id: 1,
-        name: 'Super T-Shirt',
-        price: 99,
-        image: 'tshirt.png',
-        stock: 300
-    },
-    {
-        id: 2,
-        name: 'Durable Coffee Mug',
-        price: 85,
-        image: 'mug.webp',
-        stock: 250
-    },
-    {
-        id: 3,
-        name: 'Wireless Earbuds',
-        price: 149,
-        image: 'earbuds.webp',
-        stock: 100
-    },
-    {
-        id: 4,
-        name: 'Anodized Phone Case',
-        price: 75,
-        image: 'phonecase.webp',
-        stock: 400
-    },
-    {
-        id: 5,
-        name: 'Premium Leather Jacket',
-        price: 299,
-        image: 'jacket.webp',
-        stock: 60
-    }
+     {
+         id: 1,
+         name: 'Super T-Shirt',
+         price: 99,
+         image: 'tshirt.png',
+         stock: 300
+     },
+     {
+         id: 2,
+         name: 'Durable Coffee Mug',
+         price: 85,
+         image: 'mug.webp',
+         stock: 250
+     },
+     {
+         id: 3,
+         name: 'Wireless Earbuds',
+         price: 149,
+         image: 'earbuds.webp',
+         stock: 100
+     },
+     {
+         id: 4,
+         name: 'Anodized Phone Case',
+         price: 75,
+         image: 'phonecase.webp',
+         stock: 400
+     },
+     {
+         id: 5,
+         name: 'Premium Leather Jacket',
+         price: 299,
+         image: 'jacket.webp',
+         stock: 60
+     }
 ];
 
-function Products(props) {
-    const { cart, onAddToCart } = props;
+function Products({ cart, onAddToCart }) {
+
 
     return (
         <>
