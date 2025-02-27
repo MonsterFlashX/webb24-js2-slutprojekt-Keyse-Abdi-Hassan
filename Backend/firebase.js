@@ -1,10 +1,10 @@
 const admin = require("firebase-admin");
-const serviceAccount = require("./config/firebaseServiceAccount.json");
+const serviceAccount = require("./serviceAccountKey.json");
 
-admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount),
-    databaseURL: "https://commerce-8b026-default-rtdb.europe-west1.firebasedatabase.app/",
-});
+//admin.initializeApp({
+ //   credential: admin.credential.cert(serviceAccount),
+ //   databaseURL: "https://commerce-8b026-default-rtdb.europe-west1.firebasedatabase.app/",
+//});
 
 const db = admin.firestore();
 
